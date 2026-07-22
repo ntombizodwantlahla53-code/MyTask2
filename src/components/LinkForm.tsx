@@ -8,11 +8,11 @@ const [description, setDescription] = useState('')
 const [url, setUrl] = useState('')
 const [tags, setTags] = useState('')
 
-const handleSubmit=(e.React.FormEvent) =>{
-    
-}
-}
+const handleSubmit=() =>{
+   
 
+    // onAddLink({title, description, url, tags})
+};
   return (
     <div className="linkForm">
           <h1 >Task2 LinkApp</h1>
@@ -22,6 +22,7 @@ const handleSubmit=(e.React.FormEvent) =>{
               <div className="todo-input-item">
               <label>Title</label>
               <input type= "text"
+              value={title}
               placeholder="faka text">
               </input>
             </div>
