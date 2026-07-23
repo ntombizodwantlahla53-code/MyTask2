@@ -22,8 +22,7 @@ function App() {
   // ndiswitcher to ilist yam after uAdd
   const handleAddLink = (newLinkData: Omit<LinkItemTypes, 'id'>) => {
     const newLink: LinkItemTypes = {
-      id: Date.now(),
-      ...newLinkData
+      id: Date.now(),...newLinkData
     };
     setLinks([newLink, ...links]);
     setCurrentView('list'); // kwipage yelist
@@ -44,9 +43,8 @@ function App() {
        {currentView === 'form' ? (
          <div>
            <LinkForm onAddLink={handleAddLink} />
-           {links.length > 0 && (
-             <button onClick={() => setCurrentView('list')} style={{ marginTop: '10px' }}>
-               View Saved Links ({links.length})
+           {links.length > 0 && (<button onClick={() => setCurrentView('list')}>
+               Saved Links ({links.length})
              </button>
            )}
          </div>
