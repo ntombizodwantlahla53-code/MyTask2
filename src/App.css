@@ -1,0 +1,20 @@
+.linkContainer{
+    background-color: pink;
+    border: solid black;
+    height: 250px;
+    width: 500px;
+    
+}
+.Topic{
+  text-align: center;
+}
+.linkss{
+  gap:50px;
+
+}
+.divv{
+    display:flex;
+    gap:100px;
+}
+
+
