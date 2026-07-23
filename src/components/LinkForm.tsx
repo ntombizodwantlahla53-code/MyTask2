@@ -20,57 +20,58 @@ const handleSubmit = (e: React.FormEvent) => {
 };
 
   return (
-    
-    <div className="link-form-container">
+    <div className="linkContainer">
+    <div className="Topic">
           <h1 className="form-title">Task2 LinkApp</h1>
-
+          </div>
+      
           <form onSubmit={handleSubmit} className="todo-wrapper">
-            <div className="todo-input">
-              <div className="todo-input-item">
+            <div className="divv">
+              <div className="linkss">
+              <div>
               <label>Title</label>
               <input 
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="tgyuhij"
-                className="input-field"
-              />
+                placeholder="Enter Text Here"
+                className="input-field"/>
             </div>
-            <div className="todo-input-item">
+            <div>
               <label>Description</label>
               <input 
                 type="text"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                placeholder="yguhij"
-                className="input-field"
-              />
+                placeholder="Enter Description Text"
+                className="input-field"/>
             </div>
-            <div className="todo-input-item">
+<div>
               <label>URL</label>
               <input 
                 type="text"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                placeholder="tyguhbinj"
-                className="input-field"
-              />
+                placeholder="Enter Your Link"
+                className="input-field"/>
             </div>
-            <div className="todo-input-item">
+            <div>
               <label>Tags</label>
               <input 
                 type="text"
                 value={tags}
                 onChange={(e) => setTags(e.target.value)}
-                placeholder="njkls"
-                className="input-field"
-              />
+                placeholder="Your Tag here"
+                className="input-field"/>
             </div>
-            <div className="todo-input-item">
-              <button type="submit" className='AddBtn'>Add</button> 
             </div>
+            
+              <button className= "MyButton">Add</button> 
+              
+            
           </div>
         </form>
+     
     </div>
   )
 }
