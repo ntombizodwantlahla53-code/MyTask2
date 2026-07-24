@@ -1,0 +1,44 @@
+.MyEditBtn{
+ color: black;
+ background-color: rgb(32, 183, 193);
+ height: 60px;
+ border: solid black;
+}
+.MyEditBtn:hover{
+  background-color: palevioletred;
+}
+.MySaveBtn{
+ color: black;
+ background-color: rgb(32, 183, 193);
+ height: 60px;
+ border: solid black;
+}
+.MySaveBtn:hover{
+  background-color: palevioletred;
+}
+.MyCancelBtn{
+ color: black;
+ background-color: rgb(32, 183, 193);
+ height: 60px;
+ border: solid black;
+}
+.MyCancelBtn:hover{
+  background-color: palevioletred;
+}
+.MyDeleteBtn{
+ color: black;
+ background-color: rgb(32, 183, 193);
+ height: 60px;
+ border: solid black;
+}
+.MyDeleteBtn:hover{
+  background-color: palevioletred;
+}
+
+.listCcontainer{
+  background-color: rgb(30, 85, 59);
+    border: solid black;
+    height: 300px;
+    width: 600px;
+    border-radius: 24px;
+}
