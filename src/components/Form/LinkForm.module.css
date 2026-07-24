@@ -1,0 +1,39 @@
+.linkContainer{
+    background-color: rgb(114, 89, 103);
+    border: solid black;
+    height: 330px;
+    width: 600px;
+    padding:20px;
+    margin-top: 50px;
+    border-radius: 24px;
+    
+}
+.Topic{
+  text-align: center;
+
+}
+
+label{
+    display: block;
+}
+.linkss{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+.MyButton{
+ color: black;
+ background-color: rgb(32, 183, 193);
+ height: 230px;
+ width: 120px;
+ border: solid black;
+
+}
+.MyButton:hover{
+  background-color: palevioletred;
+}
+.insideContainer{
+    display:flex;
+   gap: 200px;
+   
+}
