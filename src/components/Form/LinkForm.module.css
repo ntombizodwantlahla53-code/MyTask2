@@ -1,5 +1,5 @@
 .linkContainer{
-    background-color: rgb(114, 89, 103);
+    background-color: rgb(155, 150, 153);
     border: solid black;
     height: 330px;
     width: 600px;
@@ -10,21 +10,21 @@
 }
 .Topic{
   text-align: center;
+  text-decoration: underline;
 
 }
 
 label{
     display: block;
-}
-.linkss{
-  display: flex;
-  flex-direction: column;
-  gap:20px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 .MyButton{
+  margin-top: 30px;
  color: black;
  background-color: rgb(32, 183, 193);
- height: 230px;
+ height: 30px;
  width: 120px;
  border: solid black;
 
@@ -33,7 +33,24 @@ label{
   background-color: palevioletred;
 }
 .insideContainer{
-    display:flex;
-   gap: 200px;
-   
+  display: flex;
+  margin: auto;
+  gap: 90px;
+}
+.inputtitle{
+  width:600px;
+  font-size: large;
+}
+.inputdesc{
+  width:600px;
+  font-size: large;
+}
+.inputurl{
+  width:600px;
+  font-size: large;
+}
+
+.inputtags{
+  width:600px;
+  font-size: large;
 }
