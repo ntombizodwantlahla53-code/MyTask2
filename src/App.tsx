@@ -8,14 +8,14 @@ const App: React.FC = () => {
   const [links, setLinks] = useState<LinkItemTypes[]>([]);
   const [showList, setShowList] = useState(false);
 
-  // useEffect(() => {
-  //   const saved = localStorage.getItem("links");
-  //   if (saved) setLinks(JSON.parse(saved));
-  // }, []);
+  useEffect(() => {
+    const saved = localStorage.getItem("links");
+    if (saved) setLinks(JSON.parse(saved));
+  }, []);
 
-  // useEffect(() => {
-  //   localStorage.setItem("links", JSON.stringify(links));
-  // }, [links]);
+  useEffect(() => {
+    localStorage.setItem("links", JSON.stringify(links));
+  }, [links]);
 
   const addLink = (link: Omit<LinkItemTypes, "id">) => {
     setLinks([...links, { id: Date.now(), ...link }]);
