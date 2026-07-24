@@ -1,8 +1,16 @@
+.listCcontainer{
+  background-color: rgb(30, 85, 59);
+    border: solid black;
+    height: 300px;
+    width: 600px;
+    border-radius: 24px;
+}
 .MyEditBtn{
  color: black;
  background-color: rgb(32, 183, 193);
- height: 60px;
+ height: 50px;
  border: solid black;
+ width:120px;
 }
 .MyEditBtn:hover{
   background-color: palevioletred;
@@ -10,7 +18,8 @@
 .MySaveBtn{
  color: black;
  background-color: rgb(32, 183, 193);
- height: 60px;
+ height: 40px;
+ width: 100px;
  border: solid black;
 }
 .MySaveBtn:hover{
@@ -19,7 +28,8 @@
 .MyCancelBtn{
  color: black;
  background-color: rgb(32, 183, 193);
- height: 60px;
+ height: 40px;
+ width: 100px;
  border: solid black;
 }
 .MyCancelBtn:hover{
@@ -28,17 +38,24 @@
 .MyDeleteBtn{
  color: black;
  background-color: rgb(32, 183, 193);
- height: 60px;
+ height: 50px;
  border: solid black;
+ width:120px;
 }
 .MyDeleteBtn:hover{
   background-color: palevioletred;
 }
+.linkbox{
+    display:flex;
+    gap:120px;
+    padding: 20px;
+}
+.savedL{
+  text-align: center;
 
-.listCcontainer{
-  background-color: rgb(30, 85, 59);
-    border: solid black;
-    height: 300px;
-    width: 600px;
-    border-radius: 24px;
+}
+.box{
+    display:flex;
+    gap:90px;
+    padding: 20px;
 }
