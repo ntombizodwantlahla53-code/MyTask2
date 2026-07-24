@@ -1,9 +1,10 @@
 .listCcontainer{
   background-color: rgb(30, 85, 59);
     border: solid black;
-    height: 300px;
-    width: 600px;
+    height: 330px;
+    width: 800px;
     border-radius: 24px;
+    margin-top: 80px;
 }
 .MyEditBtn{
  color: black;
