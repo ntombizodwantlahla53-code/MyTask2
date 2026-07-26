@@ -34,9 +34,10 @@ const App: React.FC = () => {
     <>
     <div>
       {showList ? (
-        <LinkList links={links} onDelete={deleteLink} onEdit={updateLink} />
+        <LinkList links={links} onDelete={deleteLink} onEdit={updateLink} onBack={() => setShowList(false)} />
       ) : (
-        <LinkForm onAddLink={addLink} />
+        <LinkForm onAddLink={addLink}
+        onView={() => setShowList(true)} />
       )}
   </div>
   </>
