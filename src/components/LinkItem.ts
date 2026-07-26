@@ -8,6 +8,7 @@ export interface LinkItemTypes {
 
 export interface LinkFormProps {
   onAddLink: (link: Omit<LinkItemTypes, "id">) => void;
+  onView: () => void;
 }
 
 
