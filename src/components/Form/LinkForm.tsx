@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { LinkFormProps } from "../LinkItem";
 import styles from './LinkForm.module.css'
 
-export const LinkForm: React.FC<LinkFormProps> = ({ onAddLink }) => {
+export const LinkForm: React.FC<LinkFormProps> = ({ onAddLink, onView }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [url, setUrl] = useState("");
@@ -17,7 +17,7 @@ export const LinkForm: React.FC<LinkFormProps> = ({ onAddLink }) => {
     onAddLink({ title, description, url, tags });
 
     setTitle(""); setDescription(""); setUrl(""); setTags("");
-  ("/links");
+ 
 
   
   
@@ -49,7 +49,7 @@ export const LinkForm: React.FC<LinkFormProps> = ({ onAddLink }) => {
       </div>
       
       <button className={styles.MyButton}>Add</button>
-
+      <button type="button" className={styles.MyButton} onClick={onView}>View Links</button>
     </div>
       </div>
     </form>
