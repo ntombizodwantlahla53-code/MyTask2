@@ -3,7 +3,7 @@ import { useState } from "react";
 import type { LinkItemTypes } from "../LinkItem";
 import styles from './LinkList.module.css'
 
-export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit }) => {
+export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onBack }) => {
   const [editingId, setEditingId] = useState<number | null>(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -46,6 +46,7 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit }) =
                 <div>
                 <button className={styles.MySaveBtn} onClick={() => handleSave(link.id)}>Save</button>
                 <button className={styles.MyCancelBtn} onClick={() => setEditingId(null)}>Cancel</button>
+                <button className={styles.MyBackBtnn} onClick={onBack}>BackBtn</button>
               </div>
               </div>
             ) : (
@@ -60,6 +61,7 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit }) =
                 <div>
                 <button className={styles.MyEditBtn} onClick={() => handleEditClick(link)}>Edit</button>
                 <button className={styles.MyDeleteBtn} onClick={() => onDelete(link.id)}>Delete</button>
+                <button className={styles.MyBackBtn} onClick={onBack}>BackBtn</button>
               </div>
               </div>
             )}
