@@ -5,6 +5,7 @@
     width: 800px;
     border-radius: 24px;
     margin-top: 80px;
+    overflow-y: auto;
 }
 .MyEditBtn{
  color: black;
@@ -24,6 +25,16 @@
  border: solid black;
 }
 .MySaveBtn:hover{
+  background-color: palevioletred;
+}
+.MyBackBtnn{
+ color: black;
+ background-color: rgb(32, 183, 193);
+ height: 40px;
+ width: 100px;
+ border: solid black;
+}
+.MyBackBtnn:hover{
   background-color: palevioletred;
 }
 .MyCancelBtn{
@@ -46,6 +57,17 @@
 .MyDeleteBtn:hover{
   background-color: palevioletred;
 }
+.MyBackBtn{
+  color: black;
+ background-color: rgb(32, 183, 193);
+ height: 50px;
+ border: solid black;
+ width:120px;
+}
+.MyBackBtn:hover{
+  background-color: palevioletred;
+}
+
 .linkbox{
     display:flex;
     gap:120px;
