@@ -1,6 +1,8 @@
 import { useState } from "react";
 import type { LinkFormProps } from "../LinkItem";
 import styles from './LinkForm.module.css'
+import { CiSaveDown2 } from "react-icons/ci";
+import { IoIosAddCircle } from "react-icons/io";
 
 export const LinkForm: React.FC<LinkFormProps> = ({ onAddLink, onView }) => {
   const [title, setTitle] = useState("");
@@ -46,8 +48,8 @@ export const LinkForm: React.FC<LinkFormProps> = ({ onAddLink, onView }) => {
           <input className={styles.inputtags} value={tags} onChange={e => setTags(e.target.value)} placeholder="Add Tag(it is optional)" />
       </div>
       
-      <button className={styles.MyButton}>Add</button>
-      <button type="button" className={styles.MyButton} onClick={onView}>View Links</button>
+      <button className={styles.MyButton}><IoIosAddCircle/>Add</button>
+      <button type="button" className={styles.MyButton} onClick={onView}><CiSaveDown2/>View Links</button>
     </div>
       </div>
     </form>

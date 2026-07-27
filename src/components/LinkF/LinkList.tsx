@@ -2,6 +2,11 @@
 import { useState } from "react";
 import type { LinkItemTypes } from "../LinkItem";
 import styles from './LinkList.module.css'
+import { MdEditSquare } from "react-icons/md";
+import { RiDeleteBin2Fill } from "react-icons/ri";
+import { TbRewindBackward10 } from "react-icons/tb";
+import { BsFillSave2Fill } from "react-icons/bs";
+import { MdCancel } from "react-icons/md";
 
 export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onBack }) => {
   const [editingId, setEditingId] = useState<number | null>(null);
@@ -9,6 +14,7 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
   const [description, setDescription] = useState("");
   const [url, setUrl] = useState("");
   const [tags, setTags] = useState("");
+  
 
   const handleEditClick = (link: LinkItemTypes) => {
     setEditingId(link.id);
@@ -21,8 +27,8 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
   const handleSave = (id: number) => {
     onEdit({ id, title, description, url, tags });
     setEditingId(null);
-  };
 
+  };
   return (
     <div className={styles.listCcontainer}>
       <h2 className={styles.savedL}>Saved Links</h2>
@@ -44,9 +50,9 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
                 <input value={tags} onChange={e => setTags(e.target.value)} />
                 </div>
                 <div>
-                <button className={styles.MySaveBtn} onClick={() => handleSave(link.id)}>Save</button>
-                <button className={styles.MyCancelBtn} onClick={() => setEditingId(null)}>Cancel</button>
-                <button className={styles.MyBackBtnn} onClick={onBack}>BackBtn</button>
+                <button className={styles.MySaveBtn} onClick={() => handleSave(link.id)}><BsFillSave2Fill/>Save</button>
+                <button className={styles.MyCancelBtn} onClick={() => setEditingId(null)}><MdCancel/>Cancel</button>
+                <button className={styles.MyBackBtnn} onClick={onBack}><TbRewindBackward10/>BackBtn</button>
               </div>
               </div>
             ) : (
@@ -59,9 +65,9 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
                 <p>{link.tags}</p>
                 </div>
                 <div>
-                <button className={styles.MyEditBtn} onClick={() => handleEditClick(link)}>Edit</button>
-                <button className={styles.MyDeleteBtn} onClick={() => onDelete(link.id)}>Delete</button>
-                <button className={styles.MyBackBtn} onClick={onBack}>BackBtn</button>
+                <button className={styles.MyEditBtn} onClick={() => handleEditClick(link)}><MdEditSquare/>Edit</button>
+                <button className={styles.MyDeleteBtn} onClick={() => onDelete(link.id)}><RiDeleteBin2Fill/>Delete</button>
+                <button className={styles.MyBackBtn} onClick={onBack}><TbRewindBackward10/>BackBtn</button>
               </div>
               </div>
             )}
