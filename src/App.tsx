@@ -13,12 +13,12 @@ const App: React.FC = () => {
     if (saved) setLinks(JSON.parse(saved));
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("links", JSON.stringify(links));
-  }, [links]);
-
-  const addLink = (link: Omit<LinkItemTypes, "id">) => {
-    setLinks([...links, { id: Date.now(), ...link }]);
+  const addLink = (link: LinkItemTypes) => {
+    setLinks((prevLinks) =>{
+      const updatedLinks = [...prevLinks,link]
+      localStorage.setItem('links',JSON.stringify(updatedLinks))
+      return updatedLinks
+    });
     setShowList(true);
   };
 
