@@ -14,12 +14,10 @@ export const LinkForm: React.FC<LinkFormProps> = ({ onAddLink, onView }) => {
     e.preventDefault();
     if (!title || !url) return;
 
-    onAddLink({ title, description, url, tags });
+    onAddLink({ id: Date.now(), title, description, url, tags });
+
 
     setTitle(""); setDescription(""); setUrl(""); setTags("");
- 
-
-  
   
   };
 
