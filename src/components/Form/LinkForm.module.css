@@ -6,21 +6,24 @@
     margin: 20px auto; 
     padding: 20px;
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     
 }
 .Topic{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
   color: #ffffff;
   text-align: center;
+  font-style:italic;
+  font-size: 25px;
   text-decoration: underline;
   margin-top: 20px;
   margin-bottom: 40px;
-
+  background: linear-gradient(white, lightblue, lightseagreen, rgb(32, 183, 193)); 
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 
 label{
     display: block;
-    color: rgb(0, 0, 0);
     color:#94a3b8;
     font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
@@ -35,7 +38,7 @@ label{
 
 }
 .MyButton:hover{
-  background-color: palevioletred;
+  background-color: rgb(65, 242, 255);
 }
 .insideContainer{
   display: flex;
@@ -44,6 +47,7 @@ label{
   box-sizing: border-box;
 }
 .inputtitle{
+  color: #ffffff;
   background-color: #111620;
   box-sizing: border-box;
   width: 100% !important;;
@@ -55,10 +59,12 @@ label{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 }
 .inputtitle:hover{
-  background-color: #94a3b8;
+  background-color: rgb(65, 242, 255);
+  color: black;
   
 }
 .inputdesc{
+  color: #ffffff;
   background-color: #111620;
   width: 100%;
   padding: 10px;
@@ -70,10 +76,11 @@ label{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 .inputdesc:hover{
-  background-color: #94a3b8;
-  
+  background-color: rgb(65, 242, 255);
+  color: black;
 }
 .inputurl{
+  color: #ffffff;
   background-color: #111620;
  width: 100%;
   padding: 10px;
@@ -86,10 +93,11 @@ label{
 }
 
 .inputurl:hover{
-  background-color: #94a3b8;
-  
+  background-color: rgb(65, 242, 255);
+  color: black;
 }
 .inputtags{
+  color: #ffffff;
   background-color: #111620;
   width: 100%;
   padding: 10px;
@@ -101,6 +109,6 @@ label{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 .inputtags:hover{
-  background-color: #94a3b8;
-  
+  background-color: rgb(65, 242, 255);
+  color: black;
 }

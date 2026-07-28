@@ -15,7 +15,7 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
   const [url, setUrl] = useState("");
   const [tags, setTags] = useState("");
   
-
+  
   const handleEditClick = (link: LinkItemTypes) => {
     setEditingId(link.id);
     setTitle(link.title);
@@ -27,6 +27,7 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
   const handleSave = (id: number) => {
     onEdit({ id, title, description, url, tags });
     setEditingId(null);
+
 
   };
   return (
@@ -41,13 +42,13 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
               <div className={styles.box}>
                 <div className={styles.editPage}>
                   <label>title</label>
-                <input value={title} onChange={e => setTitle(e.target.value)} />
+                <input className={styles.tt} value={title} onChange={e => setTitle(e.target.value)} />
                 <label>description</label>
-                <input value={description} onChange={e => setDescription(e.target.value)} />
+                <input className={styles.descc} value={description} onChange={e => setDescription(e.target.value)} />
                 <label>url</label>
-                <input value={url} onChange={e => setUrl(e.target.value)} />
+                <input className={styles.link} value={url} onChange={e => setUrl(e.target.value)} />
                 <label>tags</label>
-                <input value={tags} onChange={e => setTags(e.target.value)} />
+                <input className={styles.tag} value={tags} onChange={e => setTags(e.target.value)} />
                 </div>
                 <div>
                 <button className={styles.MySaveBtn} onClick={() => handleSave(link.id)}><BsFillSave2Fill/>Save</button>

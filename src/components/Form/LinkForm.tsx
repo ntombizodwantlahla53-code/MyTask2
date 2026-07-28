@@ -26,7 +26,7 @@ export const LinkForm: React.FC<LinkFormProps> = ({ onAddLink, onView }) => {
   return (
     <div className={styles.linkContainer}>
     <div className={styles.Topic}>
-          <h1 className={styles.Mytitle}>Task2 LinkApp</h1>
+          <h1 className={styles.Mytitle}>LinkVault</h1>
           </div>
     <form onSubmit={handleSubmit}>
       <div className={styles.insideContainer}>

@@ -1,19 +1,17 @@
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
+  
   width: 100vw;
   min-height: 100vh;
   background-color: #0d1117; 
-  overflow-x: hidden;         
+  overflow-wrap: anywhere;      
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-#root {
-  width: 100%;
-}
