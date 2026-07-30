@@ -23,11 +23,15 @@ const App: React.FC = () => {
   };
 
   const deleteLink = (id: number) => {
-    setLinks(links.filter(link => link.id !== id));
+    const updatedLinks=links.filter(link => link.id !== id)
+    localStorage.setItem('links',JSON.stringify(updatedLinks))
+    setLinks(updatedLinks);
   };
 
   const updateLink = (updated: LinkItemTypes) => {
-    setLinks(links.map(link => (link.id === updated.id ? updated : link)));
+    const updatedLinks=(links.map(link => (link.id === updated.id ? updated : link)));
+    setLinks(updatedLinks);
+
   };
 
   return (

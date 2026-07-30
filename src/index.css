@@ -5,11 +5,10 @@
 }
 
 body {
-  
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-color: #0d1117; 
-  overflow-wrap: anywhere;      
+   
   display: flex;
   justify-content: center;
   align-items: flex-start;

@@ -2,7 +2,7 @@
     background-color: #1e2532;
     border: solid black;
     width: 95vw;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 20px auto; 
     padding: 20px;
     box-sizing: border-box;
@@ -50,7 +50,7 @@ label{
   color: #ffffff;
   background-color: #111620;
   box-sizing: border-box;
-  width: 100% !important;;
+  width: 100% ;
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;

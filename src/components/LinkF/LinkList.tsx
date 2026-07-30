@@ -33,8 +33,10 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
   return (
     <div className={styles.listCcontainer}>
       <h2 className={styles.savedL}>Saved Links</h2>
+      <button className={styles.MyBackBtnn} onClick={onBack}><TbRewindBackward10/>BackBtn</button>
       {links.length === 0 ? (
-        <p>No links yet</p>
+        <p>No links Available yet</p>
+        
       ) : (
         links.map(link => (
           <div key={link.id} className={styles.linkCard}>
@@ -68,7 +70,7 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
                 <div>
                 <button className={styles.MyEditBtn} onClick={() => handleEditClick(link)}><MdEditSquare/>Edit</button>
                 <button className={styles.MyDeleteBtn} onClick={() => onDelete(link.id)}><RiDeleteBin2Fill/>Delete</button>
-                <button className={styles.MyBackBtn} onClick={onBack}><TbRewindBackward10/>BackBtn</button>
+              
               </div>
               </div>
             )}
