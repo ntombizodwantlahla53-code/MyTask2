@@ -7,14 +7,27 @@ import { RiDeleteBin2Fill } from "react-icons/ri";
 import { TbRewindBackward10 } from "react-icons/tb";
 import { BsFillSave2Fill } from "react-icons/bs";
 import { MdCancel } from "react-icons/md";
+import {Search} from './../Search/Search'
 
 export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onBack }) => {
+  const [searchQuery, setSearchQuery] = useState<string>("")
   const [editingId, setEditingId] = useState<number | null>(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [url, setUrl] = useState("");
   const [tags, setTags] = useState("");
-  
+  const filteredResults = links.filter((link)=>{
+  return (
+    link.title.includes(searchQuery)||
+    link.description.includes(searchQuery)||
+    link.url.includes(searchQuery)||
+    (link.tags?.includes(searchQuery) || false)
+  );
+ })
+
+ const onSearch=(newValue: string)=>{
+  setSearchQuery(newValue)
+ }
   
   const handleEditClick = (link: LinkItemTypes) => {
     setEditingId(link.id);
@@ -32,13 +45,14 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
   };
   return (
     <div className={styles.listCcontainer}>
+      <Search searchQuery= {searchQuery} onSearch={onSearch}/>
       <h2 className={styles.savedL}>Saved Links</h2>
       <button className={styles.MyBackBtnn} onClick={onBack}><TbRewindBackward10/>BackBtn</button>
       {links.length === 0 ? (
         <p>No links Available yet</p>
         
       ) : (
-        links.map(link => (
+        filteredResults.map(link => (
           <div key={link.id} className={styles.linkCard}>
             {editingId === link.id ? (
               <div className={styles.box}>
