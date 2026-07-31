@@ -30,6 +30,7 @@ const App: React.FC = () => {
 
   const updateLink = (updated: LinkItemTypes) => {
     const updatedLinks=(links.map(link => (link.id === updated.id ? updated : link)));
+    localStorage.setItem('links',JSON.stringify(updatedLinks))
     setLinks(updatedLinks);
 
   };
