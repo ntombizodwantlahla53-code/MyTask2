@@ -17,17 +17,18 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
   const [url, setUrl] = useState("");
   const [tags, setTags] = useState("");
   const filteredResults = links.filter((link)=>{
-  return (
-    link.title.includes(searchQuery)||
-    link.description.includes(searchQuery)||
-    link.url.includes(searchQuery)||
-    (link.tags?.includes(searchQuery) || false)
-  );
- })
-
- const onSearch=(newValue: string)=>{
-  setSearchQuery(newValue)
- }
+    
+    return (
+      link.title.includes(searchQuery)||
+      link.description.includes(searchQuery)||
+      link.url.includes(searchQuery)||
+      (link.tags?.includes(searchQuery) || false)
+    );
+  })
+  
+  const onSearch=(newValue: string)=>{
+    setSearchQuery(newValue)
+  }
   
   const handleEditClick = (link: LinkItemTypes) => {
     setEditingId(link.id);
@@ -46,7 +47,8 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
   return (
     <div className={styles.listCcontainer}>
       <Search searchQuery= {searchQuery} onSearch={onSearch}/>
-      <h2 className={styles.savedL}>Saved Links</h2>
+      <div className={styles.Topic}>
+      <h2 className={styles.savedL}>Saved Links</h2></div>
       <button className={styles.MyBackBtnn} onClick={onBack}><TbRewindBackward10/>BackBtn</button>
       {links.length === 0 ? (
         <p>No links Available yet</p>
@@ -69,7 +71,7 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
                 <div>
                 <button className={styles.MySaveBtn} onClick={() => handleSave(link.id)}><BsFillSave2Fill/>Save</button>
                 <button className={styles.MyCancelBtn} onClick={() => setEditingId(null)}><MdCancel/>Cancel</button>
-                <button className={styles.MyBackBtnn} onClick={onBack}><TbRewindBackward10/>BackBtn</button>
+
               </div>
               </div>
             ) : (
