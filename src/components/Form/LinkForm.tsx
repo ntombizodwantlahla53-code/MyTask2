@@ -3,6 +3,8 @@ import type { LinkFormProps } from "../LinkItem";
 import styles from './LinkForm.module.css'
 import { CiSaveDown2 } from "react-icons/ci";
 import { IoIosAddCircle } from "react-icons/io";
+import { Buttons } from "../Buttons/Buttons";
+import { FaStaylinked } from "react-icons/fa";
 
 export const LinkForm: React.FC<LinkFormProps> = ({ onAddLink, onView }) => {
   const [title, setTitle] = useState("");
@@ -50,7 +52,7 @@ export const LinkForm: React.FC<LinkFormProps> = ({ onAddLink, onView }) => {
   return (
     <div className={styles.linkContainer}>
       <div className={styles.Topic}>
-        <h1 className={styles.Mytitle}>LinkVault</h1>
+        <h1 className={styles.Mytitle}><FaStaylinked/> LinkVault <FaStaylinked/></h1>
       </div>
       <form onSubmit={handleSubmit}>
         <div className={styles.insideContainer}>
@@ -71,9 +73,14 @@ export const LinkForm: React.FC<LinkFormProps> = ({ onAddLink, onView }) => {
               <label>Tags</label>
               <input className={styles.inputtags} value={tags} onChange={e => setTags(e.target.value)} placeholder="Add Tag(it is optional)" />
             </div>
-          
-            <button className={styles.MyButton}><IoIosAddCircle/>Add</button>
-            <button type="button" className={styles.MyButton} onClick={onView}><CiSaveDown2/>View Links</button>
+            <Buttons type="submit"
+            label="Add"
+            icon={<IoIosAddCircle />}
+            variant="inputting"/>
+            <Buttons label="View Links"
+            icon={<CiSaveDown2 />}
+            onClick={onView}
+            variant="inputting"/>
           </div>
         </div>
       </form>
