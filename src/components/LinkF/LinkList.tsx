@@ -8,6 +8,8 @@ import { TbRewindBackward10 } from "react-icons/tb";
 import { BsFillSave2Fill } from "react-icons/bs";
 import { MdCancel } from "react-icons/md";
 import {Search} from './../Search/Search'
+import { Buttons} from "./../../components/Buttons/Buttons"
+import { TbLinkPlus } from "react-icons/tb";
 
 export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onBack }) => {
   const [searchQuery, setSearchQuery] = useState<string>("")
@@ -48,8 +50,11 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
     <div className={styles.listCcontainer}>
       <Search searchQuery= {searchQuery} onSearch={onSearch}/>
       <div className={styles.Topic}>
-      <h2 className={styles.savedL}>Saved Links</h2></div>
-      <button className={styles.MyBackBtnn} onClick={onBack}><TbRewindBackward10/>BackBtn</button>
+      <h2 className={styles.savedL}><TbLinkPlus/> Saved Links <TbLinkPlus/></h2></div>
+      <Buttons label="Back"
+      icon={<TbRewindBackward10 />}
+      onClick={onBack}
+      variant="undoBtn"/>
       {links.length === 0 ? (
         <p>No links Available yet</p>
         
@@ -69,9 +74,16 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
                 <input className={styles.tag} value={tags} onChange={e => setTags(e.target.value)} />
                 </div>
                 <div>
-                <button className={styles.MySaveBtn} onClick={() => handleSave(link.id)}><BsFillSave2Fill/>Save</button>
-                <button className={styles.MyCancelBtn} onClick={() => setEditingId(null)}><MdCancel/>Cancel</button>
+                <Buttons label="Save"
+                icon={<BsFillSave2Fill />}
+                onClick={() => handleSave(link.id)}
+                variant="inputting"/>
 
+                <Buttons
+                label="Cancel"
+                icon={<MdCancel />}
+                onClick={() => setEditingId(null)}
+                variant="undoBtn"/>
               </div>
               </div>
             ) : (
@@ -84,9 +96,15 @@ export const LinkList: React.FC<LinkListProps> = ({ links, onDelete, onEdit, onB
                 <p>{link.tags}</p>
                 </div>
                 <div>
-                <button className={styles.MyEditBtn} onClick={() => handleEditClick(link)}><MdEditSquare/>Edit</button>
-                <button className={styles.MyDeleteBtn} onClick={() => onDelete(link.id)}><RiDeleteBin2Fill/>Delete</button>
-              
+                <Buttons label="Edit"
+                icon={<MdEditSquare />}
+                onClick={() => handleEditClick(link)}
+                variant="inputting"/>
+
+                <Buttons label="Delete"
+                icon={<RiDeleteBin2Fill />}
+                onClick={() => onDelete(link.id)}
+                variant="danger"/>
               </div>
               </div>
             )}
