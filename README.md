@@ -1,5 +1,5 @@
 # LINKVAULT
-https://socialify.git.ci/ntombizodwantlahla53-code/MyTask2/image?language=1&owner=1&name=1&stargazers=1&theme=Light
+<img src="https://socialify.git.ci/ntombizodwantlahla53-code/MyTask2/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="MyTask2" width="640" height="320" />
 
 # Project description
 ```
