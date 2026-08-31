@@ -1,6 +1,8 @@
 # LINKVAULT
 <img src="https://socialify.git.ci/ntombizodwantlahla53-code/MyTask2/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="MyTask2" width="640" height="320" />
 
+Live Demo https://my-task2-phi.vercel.app/ 
+
 # Project description
 ```
 A simple React + TypeScript application that helps users save, organize, and manage their favorite links.
